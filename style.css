@@ -1,5 +1,5 @@
-* {
-    box-sizing: border-box;
+body {
+    margin-bottom: 70px;
 }
 .img-main{
     opacity: 0.5;
