@@ -48,3 +48,7 @@ body {
     padding-bottom: 50px;
     background-color: wheat;
 }
+
+textarea{
+    resize: none;
+}

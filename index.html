@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="style.css">
 
     <title>Roberto Higueras - Web Developer </title>
 </head>
 <body>
-    <div class="nav navbar-default">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mydropdown">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="mydropdown">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="container-fluid">
+    </nav>
+    <div class="container-fluid" style="padding-top: 50px;">
         <div class="row">
         <div id="mycarousel" class="col-sm-12 carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -36,7 +46,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="sobre-mi">
+                <div class="sobre-mi" id="about">
                     <h1 class="text-center">Sobre mi</h1>
                     <p>Soy Roberto Higueras, desarrollador informático. Llevo más de 10 años en el sector
                 de las tecnologías de la información trabajando tanto en entornos back como en entornos front.
@@ -46,7 +56,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="progreso">
+                <div class="progreso" id="skills">
                 <h1 class="text-center">Habilidades</h1>
                     <div class="progress">
                         <div class="progress-bar progress-bar-success progress-bar-striped"
@@ -89,50 +99,62 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="text-center">Portfolio</h1>
+                <h1 class="text-center" id="portfolio">Portfolio</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <a href="#"></a>
-                    <img src="img/web-design_1920.jpg">
+                    <a href="#">Thumbnail</a>
+                    <!-- <img src="img/web-design_1920.jpg"> -->
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <a href="#"></a>
-                    <img src="img/web-design_1920.jpg">
+                    <a href="#">Thumbnail</a>
+                    <!-- <img src="img/web-design_1920.jpg"> -->
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <a href="#"></a>
-                    <img src="img/web-design_1920.jpg">
+                    <a href="#">Thumbnail</a>
+                    <!-- <img src="img/web-design_1920.jpg"> -->
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-offset-4 col-sm-4">
                 <div class="contacto">
-                    <h1 class="text-center">Contacto</h1>
-                    <center><form action="submit">
-                        Nombre: <input type="text" name="name"><br>
-                        Mail: <input type="text" name="email"><br>
-                        Texto: <textarea name="texto" id="texto" cols="30" rows="10">
-                            </textarea> <br>
-                            <button type="button">Enviar</button>   
-                    </form></center>
+                    <h1 class="text-center" id="contact">Contacto</h1>
+                    <form action="submit">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input class="form-control" type="text" name="name" placeholder="Nombre">   
+                        </div>
+                        <div class="form-group">
+                            <label for="mail">Mail:</label>
+                            <input class="form-control" type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Texto:</label>
+                            <textarea class="form-control" name="texto" id="texto" cols="30" rows="10">
+                            </textarea>
+                        </div> 
+                        <input type="submit" value="Enviar" class="btn btn-default">  
+                    </form>
 
                 </div>
+            </div>
+        </div>
+    
+        <div class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <p class="navbar-text">Desarrollado por Roberto Higueras 2017</p>
             </div>
         </div>
     </div>
-    <div class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container">
-            <p class="navbar-text">Desarrollado por Roberto Higueras 2017</p>
-        </div>
-    </footer>
-
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
 </body>
 </html>
